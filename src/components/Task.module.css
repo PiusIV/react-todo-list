@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  border-bottom: 1px solid rgb(85, 83, 83);
+  overflow: hidden;
+  max-width: 40rem;
+
+  p {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    word-wrap: break-word;
+    text-transform: capitalize;
+    max-width: 20rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #eee;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+
+  input {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,30 @@
+.input {
+  padding: 1rem;
+  background: none;
+  border-radius: inherit;
+  border: none;
+  color: white;
+  font-weight: 400;
+  font-size: large;
+}
+
+.input[type="text"]:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.form_container {
+  display: flex;
+  justify-content: flex-start;
+  /* justify-content: space-around; */
+  gap: 1rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  width: 37rem;
+  border-radius: 0.7rem;
+  box-shadow: 0px 6px 6px var(--background-color);
+}
+
+.submit {
+  cursor: pointer;
+}
