@@ -16,9 +16,11 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  // const handleToggleItem = (id) => {
-  //   setTasks((tasks) => tasks.map(task) => {...tasks, !task:packed })
-  // }
+  const handleToggleItem = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) => (task.id !== id ? { ...task, packed: false } : task))
+    );
+  };
 
   return (
     <div className="app">
@@ -29,14 +31,10 @@ function App() {
           tasks={tasks}
           onAddTasks={handleAddTasks}
           onDeleteItem={handleDeleteItem}
+          onToggleItem={handleToggleItem}
         />
         <Footer tasks={tasks} />
       </div>
-      {/* <div className="background">
-        <div className="top-section"></div>...
-        <div className="bottom-section"></div>
-       
-      </div> */}
     </div>
   );
 }

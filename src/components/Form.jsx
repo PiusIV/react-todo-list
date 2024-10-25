@@ -3,18 +3,27 @@ import { useState } from "react";
 import styles from "./Form.module.css";
 
 function Form({ onAddTasks }) {
-  const [value, setValue] = useState("");
+  const [taskInput, setTaskInput] = useState("");
+  // const [isChecked, setIsChecked] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!value) return;
+    if (!taskInput) return;
 
-    const newTasks = { value, packed: false, id: Date.now() };
+    const newTasks = { taskInput, packed: false, id: Date.now() };
     onAddTasks(newTasks);
     console.log(newTasks);
 
-    setValue("");
+    setTaskInput("");
   }
+
+  // function handleCheckbox(e) {
+  //   setIsChecked(e.target.checked);
+
+  //   if (e.target.checked) {
+  //     handleSubmit(e);
+  //   }
+  // }
 
   return (
     <form action="" onSubmit={handleSubmit}>
@@ -25,6 +34,7 @@ function Form({ onAddTasks }) {
           id=""
           className={styles.submit}
           onChange={handleSubmit}
+          // checked={isChecked}
         />
         <input
           type="text"
@@ -32,8 +42,8 @@ function Form({ onAddTasks }) {
           id=""
           className={styles.input}
           placeholder="Create a new todo"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          value={taskInput}
+          onChange={(e) => setTaskInput(e.target.value)}
         />
       </div>
     </form>

@@ -2,7 +2,7 @@
 import Task from "./Task";
 import styles from "./TodoList.module.css";
 
-function TodoList({ tasks, onDeleteItem }) {
+function TodoList({ tasks, onDeleteItem, onToggleItem }) {
   //   const initialTasks = [
   //     {
   //       workDone:
@@ -16,7 +16,12 @@ function TodoList({ tasks, onDeleteItem }) {
     <div className={styles.container}>
       <ul>
         {tasks.map((task) => (
-          <Task task={task} key={task.id} onDeleteItem={onDeleteItem} />
+          <Task
+            task={task}
+            key={task.id}
+            onDeleteItem={onDeleteItem}
+            onToggleItem={onToggleItem}
+          />
         ))}
       </ul>
     </div>
