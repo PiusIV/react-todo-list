@@ -18,7 +18,9 @@ function App() {
 
   const handleToggleItem = (id) => {
     setTasks((tasks) =>
-      tasks.map((task) => (task.id !== id ? { ...task, packed: false } : task))
+      tasks.map((task) =>
+        task.id !== id ? { ...task, packed: !task.packed } : task
+      )
     );
   };
 
