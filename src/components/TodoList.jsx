@@ -2,16 +2,7 @@
 import Task from "./Task";
 import styles from "./TodoList.module.css";
 
-function TodoList({ tasks, onDeleteItem, onToggleItem }) {
-  //   const initialTasks = [
-  //     {
-  //       workDone:
-  //         "code hdevhvfhejrfvhvfrhjhvjhcgjcghchgxcfhgh gctgctg gcgjh ucisegvfwehf feufv",
-  //       packed: false,
-  //       id: Date.now(),
-  //     },
-  //     { workDone: "Read", packed: false, id: 222 },
-  //   ];
+function TodoList({ tasks, onDeleteItem, onToggleItem, onClearTasks }) {
   return (
     <div className={styles.container}>
       <ul>
@@ -24,6 +15,9 @@ function TodoList({ tasks, onDeleteItem, onToggleItem }) {
           />
         ))}
       </ul>
+      <button className={styles.clear_btn} onClick={onClearTasks}>
+        Clear Tasks
+      </button>
     </div>
   );
 }

@@ -8,9 +8,10 @@ function Footer({ tasks }) {
       <p>
         {info >= 1
           ? `You have ${info} tasks you haven't attended to`
-          : "Add tasks to your todo list"}
+          : "⚡ Add tasks to your todo list"}
       </p>
-      <em>To-Do List App &copy; 2024, all rights reserved</em>
+      <p></p>
+      <em>3.142_us' To-Do List App &copy; 2024, all rights reserved 🧡</em>
     </footer>
   );
 }

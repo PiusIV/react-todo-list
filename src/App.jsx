@@ -5,6 +5,15 @@ import TodoList from "./components/TodoList";
 import Footer from "./components/Footer";
 import "./App.css";
 
+// const initialTasks = [
+//   {
+//     workDone: "code",
+//     packed: false,
+//     id: Date.now(),
+//   },
+//   { workDone: "Read", packed: false, id: 222 },
+// ];
+
 function App() {
   const [tasks, setTasks] = useState([]);
 
@@ -19,9 +28,13 @@ function App() {
   const handleToggleItem = (id) => {
     setTasks((tasks) =>
       tasks.map((task) =>
-        task.id !== id ? { ...task, packed: !task.packed } : task
+        task.id === id ? { ...task, packed: !task.packed } : task
       )
     );
+  };
+
+  const handleClearTasks = () => {
+    setTasks([]);
   };
 
   return (
@@ -34,6 +47,7 @@ function App() {
           onAddTasks={handleAddTasks}
           onDeleteItem={handleDeleteItem}
           onToggleItem={handleToggleItem}
+          onClearTasks={handleClearTasks}
         />
         <Footer tasks={tasks} />
       </div>

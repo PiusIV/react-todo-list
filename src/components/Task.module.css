@@ -15,6 +15,7 @@
     word-wrap: break-word;
     text-transform: capitalize;
     max-width: 20rem;
+    transition: all 0.4s;
   }
 
   button {
