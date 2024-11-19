@@ -19,7 +19,7 @@ function TodoList({ tasks, onDeleteItem, onToggleItem, onClearTasks }) {
       {/* <button className={styles.clear_btn} onClick={onClearTasks}>
         Clear Tasks
       </button> */}
-      <Button onClick={onClearTasks}>Clear Tasks</Button>
+      <Button onClick={onClearTasks}>Clear Task</Button>
     </div>
   );
 }
