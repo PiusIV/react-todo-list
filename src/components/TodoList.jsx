@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import Task from "./Task";
+import Button from "./Button";
 import styles from "./TodoList.module.css";
 
 function TodoList({ tasks, onDeleteItem, onToggleItem, onClearTasks }) {
@@ -15,9 +16,10 @@ function TodoList({ tasks, onDeleteItem, onToggleItem, onClearTasks }) {
           />
         ))}
       </ul>
-      <button className={styles.clear_btn} onClick={onClearTasks}>
+      {/* <button className={styles.clear_btn} onClick={onClearTasks}>
         Clear Tasks
-      </button>
+      </button> */}
+      <Button onClick={onClearTasks}>Clear Tasks</Button>
     </div>
   );
 }

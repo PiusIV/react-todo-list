@@ -1,0 +1,18 @@
+.clear_btn {
+  padding: 1.2rem 0;
+  /* border-radius: 0.5rem; */
+  width: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* background: url(/src/assets/images/bg-desktop-dark.jpg); */
+  background-color: var(--background-color);
+  border: none;
+  color: #ccc;
+  transition: all 0.4s;
+
+  &:hover,
+  &:active {
+    box-shadow: 0px 1px 3px 3px inset var(--primary-color);
+  }
+}
