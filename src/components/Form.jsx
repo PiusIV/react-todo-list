@@ -12,7 +12,7 @@ function Form({ onAddTasks }) {
 
     const newTasks = { taskInput, packed: false, id: Date.now() };
     onAddTasks(newTasks);
-    console.log(newTasks);
+    // console.log(newTasks);
 
     setTaskInput("");
   }
