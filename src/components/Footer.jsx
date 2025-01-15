@@ -11,7 +11,7 @@ function Footer({ tasks }) {
           : "⚡ Add tasks to your todo list"}
       </p>
       <p></p>
-      <em>3.142_us' To-Do List App &copy; 2024, all rights reserved 🧡</em>
+      <em>3.142_us' To-Do List App &copy; 2025, all rights reserved🧡</em>
     </footer>
   );
 }
